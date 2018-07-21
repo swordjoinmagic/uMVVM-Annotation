@@ -23,6 +23,8 @@ namespace MVVMLerning {
         /// </summary>
         public readonly BindableProperty<T> viewModelProperty = new BindableProperty<T>();
 
+        //public readonly BindableProperty<T> viewModelProperty;
+
         protected readonly PropertyBinder<T> binder = new PropertyBinder<T>();
 
         /// <summary>

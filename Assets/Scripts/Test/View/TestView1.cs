@@ -13,6 +13,7 @@ class TestView1 : UnityGuiView<TestViewModel>{
 
     public TestView1() : base() {
         BindingContext = new TestViewModel();
+        
     }
 
     protected override void OnInitialize() {
@@ -55,6 +56,8 @@ class TestView1 : UnityGuiView<TestViewModel>{
     /// <param name="newValue"></param>
     private void TextValueChanged(string oldValue,string newValue) {
         textComponent.text = newValue;
-    }
+        ViewModel.PublishColorChange();
 
+        print("text值改变了");
+    }
 }

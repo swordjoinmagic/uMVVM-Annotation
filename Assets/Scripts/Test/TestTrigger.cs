@@ -15,6 +15,7 @@ class TestTrigger : MonoBehaviour{
     /// 当输入框改变时触发的方法
     /// </summary>
     public void ChangeInputFiled() {
+        print("输入框改变了");
         view1.ViewModel.Text.Value = InputFieldComponent.text;
     }
 }

@@ -13,7 +13,7 @@ namespace MVVMLerning {
 
         public delegate void OnValueChangeHandler(T oldValue,T newValue);
 
-        T value;
+        T _value;
         /// <summary>
         /// 触发的监听方法，由外部进行赋值
         /// </summary>
@@ -21,21 +21,22 @@ namespace MVVMLerning {
 
         public T Value {
             get {
-                return value;
+                return _value;
             }
 
             set {
                 // 当值发生改变时，触发监听事件
-                if (!object.Equals(this.value, value)) {
-                    OnValueChange(this.value, value);
-                    this.value = value;
+                if (!Equals(_value, value)) {
+                    T oldValue = _value;
+                    _value = value;
+                    OnValueChange(oldValue,_value);
                 }
             }
         }
 
         public override string ToString() {
-            if (this.value != null) {
-                return "BindableProperty Value : " + this.value.ToString();
+            if (_value != null) {
+                return "BindableProperty Value : " + this._value.ToString();
             } else {
                 return "BindableProperty Value : null";
             }
