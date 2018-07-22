@@ -11,14 +11,18 @@ class TestView1 : UnityGuiView<TestViewModel>{
     //==============================
     public Text textComponent;      // Text控件
 
-    public TestView1() : base() {
+    public void Awake() {
         BindingContext = new TestViewModel();
-        
+
+        Reveal();
     }
 
     protected override void OnInitialize() {
         base.OnInitialize();
         binder.Add<string>("Text", TextValueChanged);
+
+        // 进入下一生命周期
+        //Reveal();
     }
 
     public TestViewModel ViewModel {

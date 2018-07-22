@@ -5,19 +5,18 @@ using System.Text;
 using MVVMLerning;
 using UnityEngine.UI;
 using UnityEngine;
+using System.Collections;
 
 class TestView2 : UnityGuiView<TestViewModel2>{
 
     public Image images;
 
-    //public TestView2() : base() {
-    //    //
-    //    print("TestViewModel2是:" + BindingContext);
-    //    print("构造方法");
-    //}
-
     public void Awake() {
         BindingContext = new TestViewModel2();
+        print("执行Awake方法");
+
+        Reveal();
+
     }
 
     protected override void OnInitialize() {
@@ -25,6 +24,11 @@ class TestView2 : UnityGuiView<TestViewModel2>{
 
         // 为属性绑定器绑定属性Color的监听方法为OnColoChange
         binder.Add<string>("Color",OnColorChange);
+
+        print("此时的ViewModel是:"+BindingContext);
+
+        // 进入下一生命周期
+        //Reveal();
     }
 
     private void OnColorChange(string oldValue,string newValue) {
