@@ -22,6 +22,7 @@ class FaceViewModel : ViewModelBase{
         Debug.Log("正在初始化FaceViewModel");
         Initialization();
         Debug.Log("初始化FaceViewModel完成");
+        
     }
 
     public void Initialization() {

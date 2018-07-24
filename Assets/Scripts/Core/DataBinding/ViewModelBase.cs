@@ -11,7 +11,7 @@ namespace MVVMLerning {
     /// 在View进入某个阶段时(显示,隐藏,运行中),
     /// 由View调用ViewModel的各个方法(OnHide,OnFinishHide等等)
     /// </summary>
-    class ViewModelBase {
+    public class ViewModelBase {
         // 该ViewModel是否已被初始化
         private bool _isInitialized;
 
