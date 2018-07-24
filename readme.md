@@ -2,6 +2,8 @@
 
 这里是对 @木宛城主 大大的Unity MVVM UI框架uMVVM的我的一些注解~~
 
+该开源框架地址如下：https://github.com/MEyes/uMVVM
+
 方便更好的理解一下这个框架的实现步骤~
 
 ## 简单概括 ##
