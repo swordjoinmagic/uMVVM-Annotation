@@ -29,7 +29,8 @@ namespace MVVMLerning {
                 if (!Equals(_value, value)) {
                     T oldValue = _value;
                     _value = value;
-                    OnValueChange(oldValue,_value);
+                    if (OnValueChange != null)
+                        OnValueChange(oldValue,_value);
                 }
             }
         }

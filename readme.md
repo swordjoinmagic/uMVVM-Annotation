@@ -23,3 +23,11 @@ View类的运行过程如下所示:
 	↓  
 	Destroy,在Destroy状态下,View调用OnDestroty方法,同时调用ViewModel的OnDestroy方法.
 </center>
+
+
+
+## 注解日志 ##
+这里记录一下，一遍看uMVVM框架源码一边注释时我自己的一些体会~
+
+### 7/24/2018 2:18:11 PM  ###
+完成subView,subViewModel第一部分的注解，了解了subView是该框架复用的一种手段，当一个view考虑要在不同的场景下使用2次以上时，就要考虑将其变成subView，一个subView由View，Model，ViewModel组成，在包含一个subView的视图View类中，使用subView的Model来关联该subView，具体来说就是，将一个Model（类似JavaBean）变成可绑定属性放入主视图View的ViewModel中去，当subView的Model发生变化时，自动触发一个方法，在该方法中更新subView的ViewModel的属性，此时因为subView的ViewModel的属性发生改变，所以子视图自动发生了改变。
