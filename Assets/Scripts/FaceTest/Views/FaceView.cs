@@ -5,6 +5,7 @@ using System.Text;
 using UnityEngine.UI;
 using UnityEngine;
 using MVVMLerning;
+using UnityEngine.EventSystems;
 
 class FaceView : UnityGuiView<FaceViewModel>{
     //===================================
@@ -15,6 +16,9 @@ class FaceView : UnityGuiView<FaceViewModel>{
     public Image faceImage;     // 头像(略过)
     public Text nameText;       // 姓名
 
+    // 事件监听器
+    public EventTrigger eventTrigger;
+
     private void Awake() {
         BindingContext = new FaceViewModel();
 
@@ -24,9 +28,26 @@ class FaceView : UnityGuiView<FaceViewModel>{
 
     protected override void OnInitialize() {
         base.OnInitialize();
+        // 初始化Binder属性绑定器
         binder.Add<Badge>("Badge",OnBadePropertyValueChanged);
         binder.Add<string>("Name",OnNamePropertyValueChanged);
         binder.Add<int>("Level",OnLevelPropertyValueChanged);
+
+        // 监听事件
+        var pointClickEntry = new EventTrigger.Entry();
+        pointClickEntry.eventID = EventTriggerType.PointerClick;
+        pointClickEntry.callback.AddListener(eventData => {
+            print("单击了头像");
+            OnClick();
+        });
+        eventTrigger.triggers.Add(pointClickEntry);
+    }
+
+    // 处理头像点击事件,这里交给ViewModel去处理
+    private void OnClick() {
+        if (BindingContext.OnClick != null) {
+            BindingContext.OnClick();
+        }
     }
 
     /// <summary>

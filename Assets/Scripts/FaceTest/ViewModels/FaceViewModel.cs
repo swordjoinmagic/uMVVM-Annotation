@@ -6,10 +6,16 @@ using MVVMLerning;
 using UnityEngine;
 
 class FaceViewModel : ViewModelBase{
+
+    // 该ViewModel绑定的属性
     public readonly BindableProperty<string> Name = new BindableProperty<string>();
     public readonly BindableProperty<int> Level = new BindableProperty<int>();
     public readonly BindableProperty<string> Face = new BindableProperty<string>();
     public readonly BindableProperty<Badge> Badge = new BindableProperty<Badge>();
+
+    // 该ViewModel处理的交互式事件
+    public delegate void OnClickHandler();     //处理点击事件
+    public OnClickHandler OnClick;
 
     public override void OnStartReveal() {
         base.OnStartReveal();
