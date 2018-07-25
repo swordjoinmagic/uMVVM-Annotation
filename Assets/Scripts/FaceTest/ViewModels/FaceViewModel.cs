@@ -17,13 +17,13 @@ class FaceViewModel : ViewModelBase{
     public delegate void OnClickHandler();     //处理点击事件
     public OnClickHandler OnClick;
 
-    public override void OnStartReveal() {
-        base.OnStartReveal();
-        Debug.Log("正在初始化FaceViewModel");
-        Initialization();
-        Debug.Log("初始化FaceViewModel完成");
+    //public override void OnStartReveal() {
+    //    base.OnStartReveal();
+    //    //Debug.Log("正在初始化FaceViewModel");
+    //    //Initialization();
+    //    //Debug.Log("初始化FaceViewModel完成");
         
-    }
+    //}
 
     public void Initialization() {
         Name.Value = "比尔";
@@ -32,5 +32,11 @@ class FaceViewModel : ViewModelBase{
         Debug.Log("正在初始化Badge");
         Badge.Value = new Badge() { Icon="asdasd",ElementColor="Red" };
         Debug.Log("初始化Badge结束");
+    }
+    public void Initialization(FaceModel face) {
+        Name.Value = face.Name;
+        Level.Value = face.Level;
+        Face.Value = face.Face;
+        Badge.Value = face.Badge;
     }
 }

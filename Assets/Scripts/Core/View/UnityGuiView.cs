@@ -124,7 +124,7 @@ namespace MVVMLerning {
         /// </summary>
         /// <param name="immediate">是否立刻显示View</param>
         /// <param name="action">在View显示完成后执行的回调函数</param>
-        protected void Reveal(bool immediate = false,Action action = null) {
+        public void Reveal(bool immediate = false,Action action = null) {
             if (action != null) {
                 RevealedAction += action;
             }
