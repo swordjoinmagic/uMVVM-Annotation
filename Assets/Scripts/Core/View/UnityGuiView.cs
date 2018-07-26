@@ -178,6 +178,7 @@ namespace MVVMLerning {
         }
 
         protected virtual void StartAnimatedReveal() {
+            print("播放doTween动画");
             canvasGroup.interactable = false;
             transform.localScale = Vector3.one;
 

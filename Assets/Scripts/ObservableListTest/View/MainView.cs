@@ -18,6 +18,8 @@ class MainView : UnityGuiView<MainViewModel> {
     private void Awake() {
         BindingContext = new MainViewModel();
         BindingContext.Initializtion();
+
+        Reveal();
     }
 
     protected override void OnBindingContextChanged(MainViewModel oldViewModel, MainViewModel newViewModel) {
@@ -67,6 +69,7 @@ class MainView : UnityGuiView<MainViewModel> {
         var subView = newGameObject.GetComponent<FaceView>();
         subView.BindingContext = new FaceViewModel() { ParentViewModel = BindingContext };
         subView.BindingContext.Initialization(instance);
+        subView.Reveal(action:()=> { print("子View显示完成"); });
 
         newGameObject.transform.parent = FaceMembers;
         newGameObject.transform.localScale = Vector3.one;
