@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MVVMLerning {
+namespace uMVVM {
 
     /// <summary>
     /// 所有工厂公共的接口

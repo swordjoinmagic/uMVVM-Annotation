@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MVVMLerning {
+namespace uMVVM {
     /// <summary>
     /// 对象池,拥有一个最大对象数量_max,
     /// 每次有请求申请一个实例对象时,先去

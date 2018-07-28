@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MVVMLerning {
+namespace uMVVM {
     public static class ViewModelBaseExtensions {
 
         /// <summary>

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using MVVMLerning;
+using uMVVM;
 using UnityEngine;
 
 class TestViewModel : ViewModelBase{

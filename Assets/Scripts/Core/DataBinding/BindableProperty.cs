@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MVVMLerning {
+namespace uMVVM {
 
     /// <summary>
     /// 可绑定属性，当该属性值发生改变时，

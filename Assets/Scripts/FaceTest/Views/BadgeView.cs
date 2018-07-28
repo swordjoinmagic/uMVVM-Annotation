@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using MVVMLerning;
+using uMVVM;
 using UnityEngine.UI;
 using UnityEngine;
 class BadgeView : UnityGuiView<BadgeViewModel>{

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-namespace MVVMLerning {
+namespace uMVVM {
 
     /// <summary>
     /// 所有View视图类的基类,继承Unity3D的MonoBehaviour类

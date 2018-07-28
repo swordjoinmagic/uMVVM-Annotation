@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace MVVMLerning {
+namespace uMVVM {
     
     /// <summary>
     /// 属性绑定器,存在的意义是减少代码量,

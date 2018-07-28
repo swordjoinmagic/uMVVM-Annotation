@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MVVMLerning{
+namespace uMVVM{
     /// <summary>
     /// 动态数据集合,当集合添加、删除数据的时候,
     /// 提供一种通知机制,告诉UI动态更新界面.

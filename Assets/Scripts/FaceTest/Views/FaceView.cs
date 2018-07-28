@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine.UI;
 using UnityEngine;
-using MVVMLerning;
+using uMVVM;
 using UnityEngine.EventSystems;
 
 class FaceView : UnityGuiView<FaceViewModel>{

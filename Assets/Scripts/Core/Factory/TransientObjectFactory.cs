@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MVVMLerning {
+namespace uMVVM {
     /// <summary>
     /// 创建临时对象的工厂,每次请求都返回一个
     /// 不同的对象给调用者

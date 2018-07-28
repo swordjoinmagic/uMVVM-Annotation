@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MVVMLerning {
+namespace uMVVM {
     /// <summary>
     /// 基于【服务定位】模式实现IOC
     /// 在内部维护一个字典，字典的值是Func，
@@ -114,7 +114,9 @@ namespace MVVMLerning {
         }
 
         /// <summary>
-        /// 从IOC容器中获取一个对象实例
+        /// 从IOC容器中获取一个对象实例,
+        /// 只有当真正要获取一个对象的时候,
+        /// 才会调用工厂模式进行对象的创建
         /// </summary>
         /// <typeparam name="TInterface"></typeparam>
         /// <returns></returns>

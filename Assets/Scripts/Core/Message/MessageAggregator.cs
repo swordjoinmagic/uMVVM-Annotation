@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace MVVMLerning {
+namespace uMVVM {
 
     /// <summary>
     /// 处理消息来时的委托，即所有处理方法的原型

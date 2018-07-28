@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using MVVMLerning;
+using uMVVM;
 
 class BadgeViewModel : ViewModelBase{
     public readonly BindableProperty<string> Icon = new BindableProperty<string>();
